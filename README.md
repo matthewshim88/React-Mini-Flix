@@ -1,14 +1,15 @@
-# A Complete Intro to React
+# Mini-Flix: A React Demo
 
-Welcome to a complete intro to React! The site actual workshop material for this repo can be found [here][gh-page]. On the master branch you will find the completed project. On the start branch you will find the barebones boilerplater of the project designed to help you get started.
+Done at Bryan Holt's intro to React Workshop
+
+[gh-page](link): http://btholt.github.io/complete-intro-to-react/
 
 ## Self Reminder:
+--useful for debugging props in your components
 <pre><code>
   {JSON.stringify(this.props, null, 4)}
-</code></pre> 
+</code></pre>
 
 ## License
 
 MIT
-
-[gh-page]: http://btholt.github.io/complete-intro-to-react/
