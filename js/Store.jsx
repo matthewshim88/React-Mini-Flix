@@ -24,7 +24,12 @@ const reduceSearchTerm = (state, action) => {
   return newState
 }
 
-const store = redux.createStore(rootReducer)
+// copied from redux-tools docs...
+// for production: const store = redux.createStor(rootReducer) is sufficient
+const store = redux.createStore(rootReducer, initialState, redux.compose(
+  typeof window === 'object' && typeof window.devToolsExtension !== 'undefined'
+  ? window.devToolsExtension() : (f) => f
+))
 
 const mapStateToProps = (state) => {
   return {searchTerm: state.searchTerm}
@@ -40,4 +45,4 @@ const mapDispatchToProps = (dispatch) => {
 
 const connector = reactRedux.connect(mapStateToProps, mapDispatchToProps)
 // { connector: connector, store: store }, thanks ES6 shortcuts
-module.exports = { connector, store }
+module.exports = { connector, store, rootReducer }

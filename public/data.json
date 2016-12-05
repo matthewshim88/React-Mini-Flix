@@ -146,5 +146,48 @@
         "poster": "wbd.jpg",
         "imdbID": "tt4574708",
         "trailer": "QyZ9l8anS9I"
-    }]
+    }, {
+        "title": "Stranger Things",
+        "year": "2016-",
+        "description": "When a young boy disappears, his mother, a police chief, and his friends must confront terrifying forces in order to get him back.",
+        "poster": "sthings.jpg",
+        "imdbID": "tt4574334",
+        "trailer": "XWxyRG_tckY"
+      }, {
+        "title": "Luke Cage",
+        "year": "2016-",
+        "description": "Given superstrength and durability by a sabotaged experiment, a wrongly accused man escapes prison to become a superhero for hire.",
+        "poster": "lcage.jpg",
+        "imdbID": "tt3322314",
+        "trailer": "ytkjQvSk2VA"
+        }, {
+        "title": "Cooked",
+        "year": "2016-",
+        "description": "As he tries his hand at baking, brewing and braising, acclaimed food writer Michael Pollan explores how cooking transforms food and shapes our world.",
+        "poster": "cooked.jpg",
+        "imdbID": "tt5347906",
+        "trailer": "epMAq5WYJk4"
+      }, {
+        "title": "Arq",
+        "year": "2016-",
+        "description": "Trapped in a lab and stuck in a time loop, a disoriented couple fends off masked raiders while harboring a new energy source that could save humanity.",
+        "poster": "arq.jpg",
+        "imdbID": "tt5640450",
+        "trailer": "JY0DGLrd9GY"
+      }, {
+        "title": "Beasts of No Nation",
+        "year": "2015-",
+        "description": "A drama based on the experiences of Agu, a child soldier fighting in the civil war of an unnamed African country.",
+        "poster": "bnon.jpg",
+        "imdbID": "tt1365050",
+        "trailer": "2xb9Ty-1frw"
+      }, {
+        "title": "The Crown",
+        "year": "2016-",
+        "description": "At a time when Britain was recovering from war and her empire was in decline, a young woman took the throne as a matter of duty not desire. Prepare for a world full of intrigue and revelations in The Crown.",
+        "poster": "crown.jpg",
+        "imdbID": "tt4786824",
+        "trailer": "JWtnJjn6ng0"
+      }
+    ]
 }

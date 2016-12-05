@@ -10,7 +10,7 @@ html {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url(img/3.jpg);
+  background-image: url(img/1.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -20,6 +20,14 @@ html {
   color: #333;
 }
 
+.reactLogo {
+  display:inline-block;
+  max-width: 50px;
+  max-height: 50px;
+  height: auto;
+  width: auto;
+}
+
 .home-info {
   background-color: rgba(220, 220, 220, .7);
   padding: 15px 30px;
@@ -27,9 +35,10 @@ html {
 }
 
 .title {
-  color: #B10DC9;
-  font-family: Skia;
+  color: #db0000;
+  font-family: sans-serif;
   font-weight: normal;
+  display:inline-block;
 }
 
 .search {
@@ -66,7 +75,7 @@ html {
 
 .container {
   position: absolute;
-  top: 15px;
+  top: 40px;
   left: 15px;
   right: 15px;
   bottom: 15px;
@@ -166,14 +175,14 @@ a > .show-card {
 }
 
 .brand {
-  font-family: Skia;
+  font-family: sans-serif;;
   font-weight: normal;
-  color: #B10DC9;
+  color: #db0000;
   margin: 0;
 }
 
 .brand > a {
-  color: #B10DC9;
+  color: #db0000;
   text-decoration: none;
 }
 
