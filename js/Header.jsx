@@ -32,7 +32,7 @@ const Header = React.createClass({
           <Link to='/' className='brand-link'>
             Mini-Flix (React Demo)
           </Link>
-          <img className='reactLogo' src='public/react.png' />
+          <img className='reactLogo' src='/public/react.png' />
         </h1>
         {utilSpace}
       </header>
