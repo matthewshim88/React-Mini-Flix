@@ -1,17 +1,57 @@
 const React = require('react')
-const ReactDOM = require('react-dom')
-const Landing = require('./Landing')
-const Search = require('./Search')
 const Layout = require('./Layout')
-const {Router, Route, IndexRoute, hashHistory} = require('react-router')
+const {Router, browserHistory} = require('react-router')
+const { store } = require('./Store')
+const { Provider } = require('react-redux')
 
-const App = () => (
-  <Router history={hashHistory}>
-    <Route path='/' component={Layout}>
-      <IndexRoute component={Landing} />
-      <Route path='/search' component={Search} />
-    </Route>
-  </Router>
-)
+if (typeof module !== 'undefined' && module.require) {
+  if (typeof require.ensure === 'undefined') {
+    require.ensure = require('node-ensure') // shim for node.js
+  }
+}
 
-ReactDOM.render(<App />, document.getElementById('app'))
+const rootRoute = {
+  component: Layout,
+  path: '/',
+  indexRoute: {
+    getComponent (location, callback) {
+      require.ensure([], (error) => {
+        callback(null, require('./Landing'))
+      })
+    }
+  },
+  childRoutes: [
+    {
+      path: 'search',
+      getComponent (location, callback) {
+        require.ensure([], (error) => {
+          callback(null, require('./Search'))
+        })
+      }
+    },
+    {
+      path: 'details/:id',
+      getComponent (location, callback) {
+        require.ensure([], (error) => {
+          callback(null, require('./Details'))
+        })
+      }
+    }
+  ]
+}
+
+const App = React.createClass({
+
+  render () {
+    return (
+      <Provider store={store}>
+        <Router history={browserHistory} routes={rootRoute} />
+      </Provider>
+    )
+  }
+})
+
+App.Routes = rootRoute
+App.History = browserHistory
+
+module.exports = App

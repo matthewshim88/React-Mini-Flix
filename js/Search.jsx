@@ -1,27 +1,22 @@
 const React = require('react')
 const ShowCard = require('./ShowCard')
-const data = require('../public/data') // collects data.json
+const Header = require('./Header')
+const { object, string, arrayOf } = React.PropTypes
+const { connector } = require('./Store')
 
 const Search = React.createClass({
-  getInitialState () {
-    return {
-      searchTerm: ''
-    }
-  },
-  handleSearcTermEvent (event) {
-    this.setState({ searchTerm: event.target.value })
+  propTypes: {
+    shows: arrayOf(object),
+    searchTerm: string
   },
   render () {
     return (
       <div className='container'>
-        <header className='header'>
-          <h1 className='brand'>Mini-Flix</h1>
-          <input value={this.state.searchTerm} onChange={this.handleSearcTermEvent} className='search-input' type='text' placeholder='Search' />
-        </header>
+        <Header showSearch />
         <div className='shows'>
-        {data.shows
+        {this.props.shows
           .filter((show) => `${show.title} ${show.description}`.toUpperCase()
-          .indexOf(this.state.searchTerm.toUpperCase()) >= 0)
+          .indexOf(this.props.searchTerm.toUpperCase()) >= 0)
            .map((show) => (
              <ShowCard {...show} key={show.imdbID} />
           ))}
@@ -31,4 +26,4 @@ const Search = React.createClass({
   }
 })
 
-module.exports = Search
+module.exports = connector(Search)

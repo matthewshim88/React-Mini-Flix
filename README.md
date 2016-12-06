@@ -1,8 +1,11 @@
-# Mini-Flix - React Demo 
-Mini Netflix Clone at Brian Holt's FEM workshop [gh-page]: http://btholt.github.io/complete-intro-to-react/
+# Mini-Flix: A React Demo
 
-## License
+Done at Bryan Holt's intro to React Workshop
 
-MIT
+[gh-page](link): http://btholt.github.io/complete-intro-to-react/
 
-
+## Self Reminder:
+--useful for debugging props in your components
+<pre><code>
+  {JSON.stringify(this.props, null, 4)}
+</code></pre>
