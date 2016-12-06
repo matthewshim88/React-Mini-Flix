@@ -29,7 +29,7 @@ class Details extends React.Component {
 
     let rating
 
-    if(this.state.omdbData.imdbRating) {
+    if (this.state.omdbData.imdbRating) {
       rating = <h3 className='video-rating'>{this.state.omdbData.imdbRating}</h3>
     }
 
@@ -39,7 +39,7 @@ class Details extends React.Component {
         <div className='video-info'>
           <h1 className='video-title'>{title}</h1>
           <h2 className='video-year'>({year})</h2>
-          {rating}
+          <h3 className='video-title'>IMDB Rating: {rating}</h3>
           <img className='video-poster' src={`/public/img/posters/${poster}`} />
           <p className='video-description'>{description}</p>
         </div>
